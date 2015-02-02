@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="ga_sessionTimeout">300</integer>
+
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">true</bool>
+
+    <!-- Enable automatic exception tracking -->
+    <bool name="ga_reportUncaughtExceptions">false</bool>
+
+    <!-- The screen names that will appear in reports -->
+    <screenName name=".ui.BaseActivity">BaseActivity</screenName>
+
+    <!-- Property id. -->
+    <string name="ga_trackingId">UA-44300274-4</string>
+
+</resources>

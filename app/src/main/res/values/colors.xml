@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="ft_primary">#ff00a678</color>
+    <color name="ft_primary_dark">#ff00906b</color>
+    <color name="ft_accent">#6F716C</color>
+
+</resources>

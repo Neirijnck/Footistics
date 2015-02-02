@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme" />
+
+    <style name="Theme.BaseFootistics" parent="Theme.AppCompat.NoActionBar">
+
+        <!-- All customizations that are SPECIFIC to API-level 15+ go here. -->
+
+    </style>
+
+    <!-- Footistics default theme -->
+    <style name="Theme.Footistics" parent="Theme.BaseFootistics">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+        <!--   your app's branding color (for the app bar) -->
+        <item name="colorPrimary">@color/ft_primary</item>
+        <!--   darker variant of colorPrimary (for status bar, contextual app bars) -->
+        <item name="colorPrimaryDark">@color/ft_primary_dark</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="colorAccent">@color/ft_accent</item>
+
+
+        <!-- Text -->
+        <item name="android:textAppearance">@style/TextAppearance</item>
+
+    </style>
+
+</resources>

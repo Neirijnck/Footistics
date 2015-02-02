@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--App Data-->
     <string name="app_name">Footistics</string>
-    <string name="hello_world">Hello world!</string>
+
+    <!--Actions-->
     <string name="action_settings">Settings</string>
 
 </resources>
