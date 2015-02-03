@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="ft_primary">#ff00a678</color>
-    <color name="ft_primary_dark">#ff00906b</color>
-    <color name="ft_accent">#6F716C</color>
+    <color name="transparent">#00000000</color>
+    <color name="ft_primary">#ff00996b</color>
+    <color name="ft_primary_dark">#ff008661</color>
+    <color name="ft_accent">#ff757772</color>
+    <color name="ft_navbar_background">#ff1c1c1c</color>
+    <color name="ft_navbar_background_inverse">#ffffffff</color>
 
 </resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Colors -->
+    <attr name="ftColorBackgroundDrawer" format="reference|color" />
+
+    <!-- Drawables -->
+    <attr name="drawableAccount" format="reference" />
+    <attr name="drawableDivider" format="reference" />
+    <attr name="drawableSeasonalStats" format="reference" />
+    <attr name="drawableGlobalStats" format="reference" />
+    <attr name="drawableSettings" format="reference" />
+    <attr name="drawableHelp" format="reference" />
+
+</resources>
