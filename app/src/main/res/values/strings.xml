@@ -5,14 +5,21 @@
     <string name="app_name">Footistics</string>
 
     <!-- Drawer -->
-    <string name="seasonal">Seasonal Stats</string>
-    <string name="global">Global Stats</string>
+    <string name="seasonal">Seasonal Statistics</string>
+    <string name="global">Global Statistics</string>
     <string name="preferences">Settings</string>
     <string name="help">Help</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
 
-    <!-- Actions -->
-    <string name="action_settings">Settings</string>
+    <!-- Tabs -->
+    <string name="tab_games">Games</string>
+    <string name="tab_overview">Overview</string>
+
+    <!-- Settings -->
+    <string name="pref_category_appearance">Appearance</string>
+    <string name="pref_theme">Theme</string>
+    <string name="pref_theme_default">Footistics</string>
+    <string name="pref_theme_light">Footistics Light</string>
 
 </resources>

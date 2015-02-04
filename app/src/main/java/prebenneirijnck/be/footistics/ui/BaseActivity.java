@@ -16,7 +16,13 @@ public abstract class BaseActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setCustomTheme();
         super.onCreate(savedInstanceState);
+    }
+
+    protected void setCustomTheme() {
+        // set a theme based on user preference
+        setTheme(FootisticsPreferences.THEME);
     }
 
     @Override

@@ -8,6 +8,8 @@ import android.util.TypedValue;
 import com.google.android.gms.analytics.HitBuilders;
 
 import prebenneirijnck.be.footistics.Analytics;
+import prebenneirijnck.be.footistics.R;
+import prebenneirijnck.be.footistics.ui.FootisticsPreferences;
 
 public class Utils {
 
@@ -29,6 +31,21 @@ public class Utils {
         TypedValue outValue = new TypedValue();
         theme.resolveAttribute(attributeResId, outValue, true);
         return outValue.resourceId;
+    }
+
+    /**
+     * Sets the global app theme variable. Applied by all activities once they are created.
+     */
+    public static synchronized void updateTheme(String themeIndex) {
+        int theme = Integer.valueOf(themeIndex);
+        switch (theme) {
+            case 1:
+                FootisticsPreferences.THEME = R.style.Theme_Footistics_Light;
+                break;
+            default:
+                FootisticsPreferences.THEME = R.style.Theme_Footistics;
+                break;
+        }
     }
 
 }

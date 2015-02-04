@@ -41,6 +41,8 @@ public abstract class BaseNavDrawerActivity extends BaseActivity implements Adap
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // set a theme based on user preference
+        setTheme(FootisticsPreferences.THEME);
         super.onCreate(savedInstanceState);
 
         mHandler = new Handler();
@@ -104,11 +106,11 @@ public abstract class BaseNavDrawerActivity extends BaseActivity implements Adap
             }
             case MENU_ITEM_SEASONAL_POSITION:
             {
-//                if(this instanceof ...Activity){
-//                break;
-//                }
-//                launchIntent = new Intent(this, BaseActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-//                Utils.trackAction(this, TAG_NAV_DRAWER, "Seasonal Stats");
+                if(this instanceof SeasonalStatsActivity){
+                    break;
+                }
+                launchIntent = new Intent(this, SeasonalStatsActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                Utils.trackAction(this, TAG_NAV_DRAWER, "Seasonal Stats");
                 break;
             }
             case MENU_ITEM_GLOBAL_POSITION:
@@ -122,8 +124,8 @@ public abstract class BaseNavDrawerActivity extends BaseActivity implements Adap
             }
             case MENU_ITEM_SETTINGS_POSITION:
             {
-//                launchIntent = new Intent(this, Preferences.class);
-//                Utils.trackAction(this, TAG_NAV_DRAWER, "Settings");
+                launchIntent = new Intent(this, FootisticsPreferences.class);
+                Utils.trackAction(this, TAG_NAV_DRAWER, "Settings");
                 break;
             }
             case MENU_ITEM_HELP_POSITION:

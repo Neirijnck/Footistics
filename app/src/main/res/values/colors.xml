@@ -4,7 +4,12 @@
     <color name="transparent">#00000000</color>
     <color name="ft_primary">#ff00996b</color>
     <color name="ft_primary_dark">#ff008661</color>
+    <color name="ft_primary_light">#a300996b</color>
+    <color name="ft_primary_very_light">#4300996b</color>
     <color name="ft_accent">#ff757772</color>
+    <color name="ft_tab_text">#fff</color>
+    <color name="ft_tab_indicator">#fff</color>
+    <color name="ft_drawer_account_text">#fff</color>
     <color name="ft_navbar_background">#ff1c1c1c</color>
     <color name="ft_navbar_background_inverse">#ffffffff</color>
 

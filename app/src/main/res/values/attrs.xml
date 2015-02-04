@@ -3,6 +3,10 @@
 
     <!-- Colors -->
     <attr name="ftColorBackgroundDrawer" format="reference|color" />
+    <attr name="ftColorAccountTextDrawer" format="reference|color" />
+    <attr name="ftColorBackgroundTabs" format="reference|color" />
+    <attr name="ftColorIndicatorTabs" format="reference|color" />
+    <attr name="ftColorTextTabs" format="reference|color" />
 
     <!-- Drawables -->
     <attr name="drawableAccount" format="reference" />

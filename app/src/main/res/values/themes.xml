@@ -29,9 +29,13 @@
 
         <!-- Colors -->
         <item name="ftColorBackgroundDrawer">@color/ft_navbar_background</item>
+        <item name="ftColorAccountTextDrawer">@color/ft_drawer_account_text</item>
+        <item name="ftColorBackgroundTabs">@color/ft_primary</item>
+        <item name="ftColorIndicatorTabs">@color/ft_tab_indicator</item>
+        <item name="ftColorTextTabs">@color/ft_tab_text</item>
 
         <!-- Drawables -->
-        <item name="drawableAccount">@drawable/ic_person_grey600_24dp</item>
+        <item name="drawableAccount">@drawable/ic_person_grey600_48dp</item>
         <item name="drawableDivider">@drawable/divider</item>
         <item name="drawableSeasonalStats">@drawable/ic_event_white_24dp</item>
         <item name="drawableGlobalStats">@drawable/ic_assessment_white_24dp</item>
@@ -71,9 +75,13 @@
 
         <!-- Colors -->
         <item name="ftColorBackgroundDrawer">@color/ft_navbar_background_inverse</item>
+        <item name="ftColorAccountTextDrawer">@color/ft_drawer_account_text</item>
+        <item name="ftColorBackgroundTabs">@color/ft_primary</item>
+        <item name="ftColorIndicatorTabs">@color/ft_tab_indicator</item>
+        <item name="ftColorTextTabs">@color/ft_tab_text</item>
 
         <!-- Drawables -->
-        <item name="drawableAccount">@drawable/ic_person_grey600_24dp</item>
+        <item name="drawableAccount">@drawable/ic_person_grey600_48dp</item>
         <item name="drawableDivider">@drawable/divider_light</item>
         <item name="drawableSeasonalStats">@drawable/ic_event_grey600_24dp</item>
         <item name="drawableGlobalStats">@drawable/ic_assessment_grey600_24dp</item>

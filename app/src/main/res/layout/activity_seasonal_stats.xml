@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <com.astuetz.PagerSlidingTabStrip
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/seasonalStatsTabStrip"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_height"
+            app:pstsIndicatorHeight="@dimen/indicator_height"
+            android:textSize="@dimen/default_text_size"
+            android:textColor="?attr/ftColorTextTabs"
+            app:pstsIndicatorColor="?attr/ftColorIndicatorTabs"
+            android:background="?attr/ftColorBackgroundTabs"
+            app:pstsDividerColor="?attr/ftColorBackgroundTabs"
+            app:pstsTabBackground="@drawable/tab_background"
+            app:pstsShouldExpand="true"
+            app:pstsUnderlineHeight="0dp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/seasonalStatsPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/drawer_left" />
+
+</android.support.v4.widget.DrawerLayout>
