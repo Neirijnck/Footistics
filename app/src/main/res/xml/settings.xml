@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <ListPreference
+        android:defaultValue="en"
+        android:entries="@array/languages"
+        android:entryValues="@array/languageData"
+        android:key="be.prebenneirijnck.footistics.language"
+        android:title="@string/pref_language" />
+
     <PreferenceCategory android:title="@string/pref_category_appearance">
         <ListPreference
             android:defaultValue="0"

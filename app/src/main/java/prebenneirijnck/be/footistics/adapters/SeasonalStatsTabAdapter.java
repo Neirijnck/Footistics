@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import prebenneirijnck.be.footistics.ui.GamesFragment;
+import prebenneirijnck.be.footistics.ui.OverviewFragment;
 
 public class SeasonalStatsTabAdapter extends FragmentStatePagerAdapter {
 
@@ -28,7 +29,7 @@ public class SeasonalStatsTabAdapter extends FragmentStatePagerAdapter {
                 return new GamesFragment();
             case 1:
                 //overview fragment
-                return new GamesFragment();
+                return new OverviewFragment();
         }
         return null;
     }

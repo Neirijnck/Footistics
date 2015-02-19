@@ -11,11 +11,9 @@
 
     <!-- Drawer -->
     <dimen name="drawer_width">260dp</dimen>
-    <dimen name="drawer_item_height">64dp</dimen>
+    <dimen name="drawer_item_height">56dp</dimen>
     <dimen name="drawer_icon_size">24dp</dimen>
     <dimen name="keyline">16dp</dimen>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="person_icon_size">52dp</dimen>
 
     <!-- Tabstrip -->

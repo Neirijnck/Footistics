@@ -17,12 +17,18 @@
         android:theme="@style/Theme.Footistics" >
 
         <!-- Seasonal Statistics -->
-        <activity
-            android:name=".ui.SeasonalStatsActivity">
+        <activity android:name=".ui.SeasonalStatsActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <!-- Global Statistics -->
+        <activity
+            android:name=".ui.GlobalStatsActivity"
+            android:label="@string/global" >
         </activity>
 
         <!-- Settings -->
@@ -34,10 +40,20 @@
                 android:value=".ui.SeasonalStatsActivity" />
         </activity>
 
+        <!-- Help -->
+        <activity
+            android:name=".ui.HelpActivity"
+            android:label="@string/help" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.SeasonalStatsActivity" />
+        </activity>
+
         <!-- Google Play services version tag -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
         <!-- Crashlytics -->
         <meta-data
             android:name="com.crashlytics.ApiKey"

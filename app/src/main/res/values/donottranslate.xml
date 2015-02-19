@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Languages -->
+    <string-array name="languages">
+        <item>English</item>
+        <item>Français</item>
+        <item>Nederlands</item>
+    </string-array>
+    <string-array name="languageData">
+        <item>en</item>
+        <item>fr</item>
+        <item>nl</item>
+    </string-array>
+
     <!-- Theme variants -->
     <string-array name="themeSelection">
         <item>@string/pref_theme_default</item>

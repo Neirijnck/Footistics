@@ -7,15 +7,6 @@
     android:layout_height="120dp"
     android:background="@drawable/account_pattern_inverse">
 
-    <com.pkmmte.view.CircularImageView
-        android:id="@+id/drawerItemPerson"
-        android:layout_width="@dimen/person_icon_size"
-        android:layout_height="@dimen/person_icon_size"
-        android:layout_margin="@dimen/large_padding"
-        android:src="?attr/drawableAccount"
-        app:border="true"
-        app:border_width="3dp"/>
-
     <TextView
         android:id="@+id/drawerItemUsername"
         android:layout_width="match_parent"
@@ -40,5 +31,15 @@
         android:textAllCaps="true"
         android:textColor="?attr/ftColorAccountTextDrawer"
         tools:text="Preben"/>
+
+    <com.pkmmte.view.CircularImageView
+        android:id="@+id/drawerItemPerson"
+        android:layout_width="@dimen/person_icon_size"
+        android:layout_height="@dimen/person_icon_size"
+        android:layout_margin="@dimen/large_padding"
+        android:layout_above="@id/drawerItemAccount"
+        android:src="?attr/drawableAccount"
+        app:border="true"
+        app:border_width="3dp"/>
 
 </RelativeLayout>

@@ -76,7 +76,8 @@ public class FootisticsPreferences extends ActionBarActivity {
         GoogleAnalytics.getInstance(this).reportActivityStart(this);
     }
 
-    protected static void setupSettings(final Activity activity, final Intent startIntent, Preference themePref){
+    protected static void setupSettings(final Activity activity, final Intent startIntent, Preference themePref, Preference languagePref){
+
         themePref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -89,7 +90,10 @@ public class FootisticsPreferences extends ActionBarActivity {
                 return true;
             }
         });
+
+        //show currently set values for list prefs
         setListPreferenceSummary((ListPreference) themePref);
+        setListPreferenceSummary((ListPreference) languagePref);
     }
 
     public static void setListPreferenceSummary(ListPreference listPref) {
@@ -105,7 +109,8 @@ public class FootisticsPreferences extends ActionBarActivity {
 
             addPreferencesFromResource(R.xml.settings);
             setupSettings(getActivity(), getActivity().getIntent(),
-                    findPreference(DisplaySettings.KEY_THEME));
+                    findPreference(DisplaySettings.KEY_THEME),
+                    findPreference(DisplaySettings.KEY_LANGUAGE));
         }
 
         @Override
@@ -126,14 +131,16 @@ public class FootisticsPreferences extends ActionBarActivity {
 
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-            if(DisplaySettings.KEY_THEME.equals(key)){
+
+            if(DisplaySettings.KEY_THEME.equals(key)
+                    || DisplaySettings.KEY_LANGUAGE.equals(key)){
                 Preference pref = findPreference(key);
                 if(pref!=null){
                     setListPreferenceSummary((ListPreference) pref);
                 }
             }
-        }
 
+        }
     }
 
 }

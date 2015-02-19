@@ -101,7 +101,8 @@ public abstract class BaseNavDrawerActivity extends BaseActivity implements Adap
         switch(position){
             case MENU_ITEM_ACCOUNT:
             {
-//                launchIntent = new Intent(this, ....class);
+//                launchIntent = new Intent(this, .class);
+                Utils.trackAction(this, TAG_NAV_DRAWER, "Account");
                 break;
             }
             case MENU_ITEM_SEASONAL_POSITION:
@@ -115,11 +116,11 @@ public abstract class BaseNavDrawerActivity extends BaseActivity implements Adap
             }
             case MENU_ITEM_GLOBAL_POSITION:
             {
-//                if(this instanceof ...Activity){
-//                break;
-//                }
-//                launchIntent = new Intent(this, BaseActivity.class).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-//                Utils.trackAction(this, TAG_NAV_DRAWER, "Global Stats");
+                if(this instanceof GlobalStatsActivity){
+                    break;
+                }
+                launchIntent = new Intent(this, GlobalStatsActivity.class).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                Utils.trackAction(this, TAG_NAV_DRAWER, "Global Stats");
                 break;
             }
             case MENU_ITEM_SETTINGS_POSITION:
@@ -130,13 +131,13 @@ public abstract class BaseNavDrawerActivity extends BaseActivity implements Adap
             }
             case MENU_ITEM_HELP_POSITION:
             {
-//                launchIntent = new Intent(this, HelpActivity.class);
-//                Utils.trackAction(this, TAG_NAV_DRAWER, "Help");
+                launchIntent = new Intent(this, HelpActivity.class);
+                Utils.trackAction(this, TAG_NAV_DRAWER, "Help");
                 break;
             }
         }
 
-        // already displaying correct screen
+        //already displaying correct screen
         if (launchIntent != null) {
             final Intent finalLaunchIntent = launchIntent;
             mHandler.postDelayed(new Runnable() {
