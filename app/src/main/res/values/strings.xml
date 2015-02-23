@@ -4,6 +4,10 @@
     <!-- App Data -->
     <string name="app_name">Footistics</string>
 
+    <!-- Actions -->
+    <string name="action_add_game">Add game</string>
+    <string name="action_filter_games">Filter games</string>
+
     <!-- Drawer -->
     <string name="seasonal">Seasonal Statistics</string>
     <string name="global">Global Statistics</string>

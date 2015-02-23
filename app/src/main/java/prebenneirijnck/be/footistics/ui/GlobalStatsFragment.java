@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 
 import prebenneirijnck.be.footistics.R;
 
-public class OverviewFragment extends Fragment {
+public class GlobalStatsFragment extends Fragment{
 
-    public static OverviewFragment newInstance() {
-        OverviewFragment f = new OverviewFragment();
+    public static GlobalStatsFragment newInstance() {
+        GlobalStatsFragment f = new GlobalStatsFragment();
 
         Bundle args = new Bundle();
         f.setArguments(args);
@@ -21,7 +21,7 @@ public class OverviewFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_overview, container, false);
+        return inflater.inflate(R.layout.fragment_global_stats, container, false);
     }
 
 }

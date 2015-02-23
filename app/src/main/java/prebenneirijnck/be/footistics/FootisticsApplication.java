@@ -17,6 +17,11 @@ import timber.log.Timber;
  */
 public class FootisticsApplication extends Application {
 
+    /**
+     * The content authority used to identify the Footistics {@link android.content.ContentProvider}
+     */
+    public static final String CONTENT_AUTHORITY = BuildConfig.APPLICATION_ID + ".provider";
+
     @Override
     public void onCreate() {
         super.onCreate();

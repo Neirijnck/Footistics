@@ -35,6 +35,8 @@
         <item name="ftColorTextTabs">@color/ft_tab_text</item>
 
         <!-- Drawables -->
+        <item name="drawableFilter">@drawable/ic_action_filter</item>
+        <item name="drawableAddIcon">@drawable/ic_action_add</item>
         <item name="drawableAccount">@drawable/ic_person_grey600_48dp</item>
         <item name="drawableDivider">@drawable/divider</item>
         <item name="drawableSeasonalStats">@drawable/ic_event_white_24dp</item>
@@ -81,6 +83,8 @@
         <item name="ftColorTextTabs">@color/ft_tab_text</item>
 
         <!-- Drawables -->
+        <item name="drawableFilter">@drawable/ic_action_filter_inverse</item>
+        <item name="drawableAddIcon">@drawable/ic_action_add_inverse</item>
         <item name="drawableAccount">@drawable/ic_person_grey600_48dp</item>
         <item name="drawableDivider">@drawable/divider_light</item>
         <item name="drawableSeasonalStats">@drawable/ic_event_grey600_24dp</item>

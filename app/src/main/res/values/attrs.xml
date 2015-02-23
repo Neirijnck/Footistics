@@ -9,6 +9,8 @@
     <attr name="ftColorTextTabs" format="reference|color" />
 
     <!-- Drawables -->
+    <attr name="drawableAddIcon" format="reference" />
+    <attr name="drawableFilter" format="reference" />
     <attr name="drawableAccount" format="reference" />
     <attr name="drawableDivider" format="reference" />
     <attr name="drawableSeasonalStats" format="reference" />

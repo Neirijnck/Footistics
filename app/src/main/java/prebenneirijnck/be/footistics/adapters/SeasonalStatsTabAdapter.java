@@ -26,10 +26,10 @@ public class SeasonalStatsTabAdapter extends FragmentStatePagerAdapter {
         switch (position){
             case 0:
                 //games fragment
-                return new GamesFragment();
+                return GamesFragment.newInstance();
             case 1:
                 //overview fragment
-                return new OverviewFragment();
+                return OverviewFragment.newInstance();
         }
         return null;
     }

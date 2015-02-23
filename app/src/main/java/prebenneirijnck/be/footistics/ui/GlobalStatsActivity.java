@@ -15,6 +15,11 @@ public class GlobalStatsActivity extends BaseTopActivity {
         setContentView(R.layout.activity_global_stats);
         setupActionBar();
         setupNavDrawer();
+
+        if (savedInstanceState == null) {
+            GlobalStatsFragment f = GlobalStatsFragment.newInstance();
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, f).commit();
+        }
     }
 
     @Override
