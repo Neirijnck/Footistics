@@ -28,7 +28,16 @@ public class GamesFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_games, container, false);
+        View v =  inflater.inflate(R.layout.fragment_games, container, false);
+
+        v.findViewById(R.id.emptyViewGames).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), AddActivity.class));
+            }
+        });
+
+        return v;
     }
 
     @Override

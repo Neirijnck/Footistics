@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/games_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/emptyViewGames"
+        android:layout_width="390dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:drawableTop="?attr/drawableAddIcon"
+        android:gravity="center"
+        android:paddingBottom="70dp"
+        android:paddingTop="70dp"
+        android:text="@string/action_add_game" />
 
-
-</LinearLayout>
+</FrameLayout>

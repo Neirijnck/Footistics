@@ -18,7 +18,7 @@ public class FootisticsContract {
 
     public static final String PATH_GLOBAL = "global";
 
-    interface ProfileColums{
+    interface ProfileColumns{
 
         /**
          * This column is NOT in this table, it is for reference purposes only.
@@ -255,7 +255,7 @@ public class FootisticsContract {
         String TOTALCAREERREDCARDS = "totalcareerredcards";
     }
 
-    public static class Profile implements ProfileColums, BaseColumns{
+    public static class Profile implements ProfileColumns, BaseColumns{
 
         public static final Uri CONTENT_URI = BASE_CONTENT_URI.buildUpon().appendPath(PATH_PROFILE).build();
 
