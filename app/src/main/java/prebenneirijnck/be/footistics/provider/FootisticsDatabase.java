@@ -14,7 +14,7 @@ public class FootisticsDatabase extends SQLiteOpenHelper{
     public static final String DATABASE_NAME="footisticsdatabase";
 
     /**
-     * Different version of the database.
+     * Different versions of the database.
      */
     public static final int DBVER_INITIAL = 1;
 

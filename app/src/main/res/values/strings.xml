@@ -27,4 +27,7 @@
     <string name="pref_theme_default">Footistics</string>
     <string name="pref_theme_light">Footistics Light</string>
 
+    <!-- Games -->
+    <string name="empty_filter">Remove all filters</string>
+
 </resources>
