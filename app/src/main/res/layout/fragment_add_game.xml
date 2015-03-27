@@ -3,6 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
+    <ImageView
+        android:id="@+id/addGameOpponentIcon"
+        android:layout_width="@dimen/add_game_icon_size"
+        android:layout_height="@dimen/add_game_icon_size"
+        android:src="?attr/drawableAddGameOpponentIcon"
+        android:layout_margin="@dimen/large_padding"/>
+    
+    <EditText
+        android:id="@+id/addGameOpponentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/large_padding"
+        android:hint="@string/add_game_opponent"
+        android:layout_toRightOf="@+id/addGameOpponentIcon"
+        android:layout_toEndOf="@+id/addGameOpponentIcon"
+        android:layout_alignBottom="@+id/addGameOpponentIcon"/>
 
 </RelativeLayout>

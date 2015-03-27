@@ -28,6 +28,14 @@
     <string name="pref_theme_light">Footistics Light</string>
 
     <!-- Games -->
+    <string name="game">Fc Eendracht Kuurne</string>
+    <string name="goals">2</string>
     <string name="empty_filter">Remove all filters</string>
+    <string name="add_game_opponent">Opponent</string>
+    <string name="add_game_score">Score</string>
+    <string name="add_game_goals">Goals</string>
+    <string name="add_game_position">Position</string>
+    <string name="add_game_yellow_cards">Yellow cards</string>
+    <string name="add_game_red_cards">Red card</string>
 
 </resources>

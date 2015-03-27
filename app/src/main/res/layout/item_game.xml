@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    cardview:cardBackgroundColor="?attr/ftColorBackgroundCard"
+    cardview:cardPreventCornerOverlap="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="105dp">
+
+        <ImageView
+            android:id="@+id/game_clubicon"
+            android:layout_width="75dp"
+            android:layout_height="90dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/default_padding"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/fce"/>
+
+        <TextView
+            android:id="@+id/game_clubname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding"
+            android:textAppearance="@style/TextAppearance.Subhead"
+            android:layout_toRightOf="@id/game_clubicon"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:textStyle="bold"
+            tools:text="@string/game" />
+
+        <TextView
+            android:id="@+id/game_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/game_clubname"
+            android:layout_toRightOf="@id/game_clubicon"
+            android:paddingRight="@dimen/inline_padding"
+            tools:text="3-2"
+            android:textAppearance="@style/TextAppearance.Headline"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/game_clubname_opponent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Subhead"
+            android:layout_toRightOf="@id/game_clubicon"
+            android:layout_toEndOf="@id/game_clubicon"
+            android:layout_below="@id/game_score"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="@string/game" />
+
+        <ImageView
+            android:id="@+id/game_goals_icon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_below="@id/game_clubname_opponent"
+            android:layout_toRightOf="@id/game_clubicon"
+            android:layout_toEndOf="@id/game_clubicon"
+            android:src="?attr/drawableGoalsIcon" />
+
+        <TextView
+            android:id="@+id/game_nr_goals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Subhead"
+            android:layout_marginTop="@dimen/small_padding"
+            android:layout_toRightOf="@id/game_goals_icon"
+            android:layout_toEndOf="@id/game_goals_icon"
+            android:layout_below="@id/game_clubname_opponent"
+            tools:text="@string/goals"/>
+
+        <ImageView
+            android:id="@+id/game_position_icon"
+            android:layout_width="20dp"
+            android:layout_height="23dp"
+            android:layout_below="@id/game_clubname_opponent"
+            android:layout_toRightOf="@id/game_nr_goals"
+            android:layout_toEndOf="@id/game_nr_goals"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:src="?attr/drawablePositionIcon"/>
+
+        <TextView
+            android:id="@+id/game_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Subhead"
+            android:layout_marginTop="@dimen/small_padding"
+            android:layout_toRightOf="@id/game_position_icon"
+            android:layout_toEndOf="@id/game_position_icon"
+            android:layout_below="@id/game_clubname_opponent"
+            tools:text="@string/goals"/>
+
+        <ImageView
+            android:id="@+id/game_yellow_card_icon"
+            android:layout_width="@dimen/game_goals_icon"
+            android:layout_height="@dimen/game_goals_icon"
+            android:layout_below="@id/game_clubname_opponent"
+            android:layout_toRightOf="@id/game_position"
+            android:layout_toEndOf="@id/game_position"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:src="@drawable/yellow_card"/>
+
+        <TextView
+            android:id="@+id/game_nr_yellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Subhead"
+            android:layout_marginTop="@dimen/small_padding"
+            android:layout_toRightOf="@id/game_yellow_card_icon"
+            android:layout_toEndOf="@id/game_yellow_card_icon"
+            android:layout_below="@id/game_clubname_opponent"
+            tools:text="@string/goals"/>
+
+        <ImageView
+            android:id="@+id/game_red_card_icon"
+            android:layout_width="@dimen/game_goals_icon"
+            android:layout_height="@dimen/game_goals_icon"
+            android:layout_below="@id/game_clubname_opponent"
+            android:layout_toRightOf="@id/game_nr_yellow"
+            android:layout_toEndOf="@id/game_nr_yellow"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:src="@drawable/red_card"/>
+
+        <TextView
+            android:id="@+id/game_nr_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Subhead"
+            android:layout_marginTop="@dimen/small_padding"
+            android:layout_toRightOf="@id/game_red_card_icon"
+            android:layout_toEndOf="@id/game_red_card_icon"
+            android:layout_below="@id/game_clubname_opponent"
+            tools:text="@string/goals"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -7,6 +7,8 @@
     <attr name="ftColorBackgroundTabs" format="reference|color" />
     <attr name="ftColorIndicatorTabs" format="reference|color" />
     <attr name="ftColorTextTabs" format="reference|color" />
+    <attr name="ftColorBackgroundFabPressed" format="reference|color" />
+    <attr name="ftColorBackgroundCard" format="reference|color" />
 
     <!-- Drawables -->
     <attr name="drawableAddIcon" format="reference" />
@@ -17,5 +19,8 @@
     <attr name="drawableGlobalStats" format="reference" />
     <attr name="drawableSettings" format="reference" />
     <attr name="drawableHelp" format="reference" />
+    <attr name="drawableGoalsIcon" format="reference" />
+    <attr name="drawablePositionIcon" format="reference" />
+    <attr name="drawableAddGameOpponentIcon" format="reference" />
 
 </resources>

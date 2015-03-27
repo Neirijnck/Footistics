@@ -7,6 +7,9 @@
 
         <!-- All customizations that are SPECIFIC to API-level 15+ go here. -->
 
+        <!-- Fast scroll thumb -->
+        <!--<item name="android:fastScrollThumbDrawable">@drawable/fastscroll_thumb</item>-->
+
     </style>
 
     <!-- Footistics default theme -->
@@ -14,7 +17,7 @@
 
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
 
-        <!--   your app's branding color (for the app bar) -->
+        <!--   app's branding color (for the app bar) -->
         <item name="colorPrimary">@color/ft_primary</item>
         <!--   darker variant of colorPrimary (for status bar, contextual app bars) -->
         <item name="colorPrimaryDark">@color/ft_primary_dark</item>
@@ -33,6 +36,8 @@
         <item name="ftColorBackgroundTabs">@color/ft_primary</item>
         <item name="ftColorIndicatorTabs">@color/ft_tab_indicator</item>
         <item name="ftColorTextTabs">@color/ft_tab_text</item>
+        <item name="ftColorBackgroundFabPressed">@color/ft_accent_light</item>
+        <item name="ftColorBackgroundCard">@color/background_card_dark</item>
 
         <!-- Drawables -->
         <item name="drawableFilter">@drawable/ic_action_filter</item>
@@ -43,6 +48,9 @@
         <item name="drawableGlobalStats">@drawable/ic_assessment_white_24dp</item>
         <item name="drawableSettings">@drawable/ic_action_settings</item>
         <item name="drawableHelp">@drawable/ic_action_help</item>
+        <item name="drawableGoalsIcon">@drawable/goal</item>
+        <item name="drawablePositionIcon">@drawable/field</item>
+        <item name="drawableAddGameOpponentIcon">@drawable/ic_group_white_24dp</item>
 
     </style>
 
@@ -50,6 +58,9 @@
     <style name="Theme.BaseFootistics.Light" parent="Theme.AppCompat.Light.NoActionBar">
 
         <!-- All customizations that are SPECIFIC to API-level 15+ go here. -->
+
+        <!-- Fast scroll thumb -->
+        <!--<item name="android:fastScrollThumbDrawable">@drawable/fastscroll_thumb</item>-->
 
     </style>
 
@@ -81,6 +92,8 @@
         <item name="ftColorBackgroundTabs">@color/ft_primary</item>
         <item name="ftColorIndicatorTabs">@color/ft_tab_indicator</item>
         <item name="ftColorTextTabs">@color/ft_tab_text</item>
+        <item name="ftColorBackgroundFabPressed">@color/ft_accent_dark</item>
+        <item name="ftColorBackgroundCard">@color/background_card_light</item>
 
         <!-- Drawables -->
         <item name="drawableFilter">@drawable/ic_action_filter_inverse</item>
@@ -91,6 +104,9 @@
         <item name="drawableGlobalStats">@drawable/ic_assessment_grey600_24dp</item>
         <item name="drawableSettings">@drawable/ic_action_settings_inverse</item>
         <item name="drawableHelp">@drawable/ic_action_help_inverse</item>
+        <item name="drawableGoalsIcon">@drawable/goal_inverse</item>
+        <item name="drawablePositionIcon">@drawable/field_inverse</item>
+        <item name="drawableAddGameOpponentIcon">@drawable/ic_group_grey600_24dp</item>
 
     </style>
 

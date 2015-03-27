@@ -9,6 +9,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
+
+import com.melnykov.fab.FloatingActionButton;
 
 import prebenneirijnck.be.footistics.R;
 import prebenneirijnck.be.footistics.util.Utils;
@@ -16,6 +19,8 @@ import prebenneirijnck.be.footistics.util.Utils;
 public class GamesFragment extends Fragment {
 
     private static final String TAG = "Games";
+
+    private GridView mGrid;
 
     public static GamesFragment newInstance() {
         GamesFragment f = new GamesFragment();
@@ -44,6 +49,20 @@ public class GamesFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        // setup grid view
+        mGrid = (GridView) getView().findViewById(R.id.listGames);
+
+        // setup floating action button for adding games
+        final FloatingActionButton buttonAddGame = (FloatingActionButton) getView().findViewById(R.id.buttonGamesAdd);
+        buttonAddGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), AddActivity.class));
+            }
+        });
+
+        buttonAddGame.attachToListView(mGrid);
+
         setHasOptionsMenu(true);
     }
 
@@ -56,16 +75,11 @@ public class GamesFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
-        if(itemId == R.id.menu_action_add_game){
-            startActivity(new Intent(getActivity(), AddActivity.class));
-            return true;
-        } else if(itemId == R.id.menu_action_filter_games){
+        if(itemId == R.id.menu_action_filter_games){
             fireTrackerEventAction("Filter games");
             // not handled here
             return super.onOptionsItemSelected(item);
         }
-
-
         return super.onOptionsItemSelected(item);
     }
 

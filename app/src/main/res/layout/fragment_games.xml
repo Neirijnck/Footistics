@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:id="@+id/games_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -28,5 +29,27 @@
         android:paddingTop="70dp"
         android:text="@string/empty_filter"
         android:visibility="gone" />
+
+    <GridView
+        android:id="@+id/listGames"
+        style="@style/Widget.Footistics.CardGrid.FastScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="@dimen/gamesgrid_columnWidth"
+        android:numColumns="auto_fit"
+        android:fastScrollEnabled="true"
+        android:stretchMode="columnWidth"/>
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/buttonGamesAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin_right"
+        android:layout_marginBottom="@dimen/fab_margin_bottom"
+        android:src="@drawable/ic_action_add"
+        fab:fab_colorNormal="?attr/colorAccent"
+        fab:fab_colorPressed="?attr/ftColorBackgroundFabPressed"
+        fab:fab_colorRipple="?attr/colorControlHighlight" />
 
 </FrameLayout>
