@@ -37,8 +37,10 @@
         android:layout_width="@dimen/person_icon_size"
         android:layout_height="@dimen/person_icon_size"
         android:layout_marginLeft="@dimen/large_padding"
+        android:layout_marginStart="@dimen/large_padding"
         android:layout_marginBottom="@dimen/default_padding"
         android:layout_above="@id/drawerItemAccount"
+        android:scaleType="centerInside"
         android:src="?attr/drawableAccount"
         app:border="true"
         app:border_width="2dp"/>

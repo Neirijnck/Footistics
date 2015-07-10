@@ -3,7 +3,7 @@
 
     <color name="transparent">#00000000</color>
     <color name="ft_primary">#ff00996b</color>
-    <color name="ft_primary_dark">#ff008661</color>
+    <color name="ft_primary_dark">#ff00855d</color>
     <color name="ft_primary_light">#a300996b</color>
     <color name="ft_primary_very_light">#4300996b</color>
     <color name="ft_accent">#ff747671</color>

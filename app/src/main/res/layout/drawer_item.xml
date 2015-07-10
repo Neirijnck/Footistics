@@ -20,9 +20,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="@dimen/large_padding"
+        android:layout_marginStart="@dimen/large_padding"
         android:layout_toRightOf="@id/drawerMenuIcon"
+        android:layout_toEndOf="@id/drawerMenuIcon"
         android:gravity="center_vertical"
         android:paddingRight="@dimen/keyline"
+        android:paddingEnd="@dimen/keyline"
         android:singleLine="true"
         android:ellipsize="end"
         tools:text="menu item"/>

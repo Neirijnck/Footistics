@@ -7,8 +7,11 @@
     <!-- Actions -->
     <string name="action_add_game">Add game</string>
     <string name="action_filter_games">Filter games</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_save">Save</string>
 
     <!-- Drawer -->
+    <string name="profile">Profile</string>
     <string name="seasonal">Seasonal Statistics</string>
     <string name="global">Global Statistics</string>
     <string name="preferences">Settings</string>
@@ -32,10 +35,51 @@
     <string name="goals">2</string>
     <string name="empty_filter">Remove all filters</string>
     <string name="add_game_opponent">Opponent</string>
+    <string name="add_game_date">Date</string>
     <string name="add_game_score">Score</string>
     <string name="add_game_goals">Goals</string>
     <string name="add_game_position">Position</string>
+    <string name="add_game_playtime">Playtime</string>
+    <string name="add_game_bonus">Bonus</string>
+    <string name="add_game_assists">Assists</string>
+    <string name="add_game_category">add_game_category</string>
     <string name="add_game_yellow_cards">Yellow cards</string>
     <string name="add_game_red_cards">Red card</string>
+
+    <!-- Football Positions -->
+    <string-array name="positions">
+        <item>Goalkeeper</item>
+        <item>Centre-back</item>
+        <item>Sweeper</item>
+        <item>Full-back</item>
+        <item>Wing-back</item>
+        <item>Centre midfield</item>
+        <item>Defensive midfield</item>
+        <item>Attacking midfield</item>
+        <item>Wide midfield</item>
+        <item>Centre forward</item>
+        <item>Second striker</item>
+        <item>Left winger</item>
+        <item>Right winger</item>
+    </string-array>
+
+    <!-- Football Categories -->
+    <string-array name="categories">
+        <item>1st Team</item>
+        <item>2nd Team</item>
+        <item>Youth</item>
+    </string-array>
+
+    <!-- Profile -->
+    <string name="profile_firstname">Firstname</string>
+    <string name="profile_lastname">Lastname</string>
+    <string name="profile_gender_male">Male</string>
+    <string name="profile_gender_female">Female</string>
+    <string name="profile_birthday">Birthday</string>
+    <string name="profile_email">Email</string>
+    <string name="profile_location">Location</string>
+    <string name="profile_weight">Weight</string>
+    <string name="profile_length">Length</string>
+    <string name="profile_last_game">Last game was \u0020</string>
 
 </resources>

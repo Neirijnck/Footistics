@@ -1,23 +1,274 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageView
-        android:id="@+id/addGameOpponentIcon"
-        android:layout_width="@dimen/add_game_icon_size"
-        android:layout_height="@dimen/add_game_icon_size"
-        android:src="?attr/drawableAddGameOpponentIcon"
-        android:layout_margin="@dimen/large_padding"/>
-    
-    <EditText
-        android:id="@+id/addGameOpponentText"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/large_padding"
-        android:hint="@string/add_game_opponent"
-        android:layout_toRightOf="@+id/addGameOpponentIcon"
-        android:layout_toEndOf="@+id/addGameOpponentIcon"
-        android:layout_alignBottom="@+id/addGameOpponentIcon"/>
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants"
+        android:paddingBottom="@dimen/large_padding">
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/addGameOpponentIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableAddGameOpponentIcon"
+            android:layout_margin="@dimen/very_large_padding"/>
+
+        <EditText
+            android:id="@+id/addGameOpponentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:hint="@string/add_game_opponent"
+            android:layout_toRightOf="@+id/addGameOpponentIcon"
+            android:layout_toEndOf="@+id/addGameOpponentIcon"
+            android:layout_alignBottom="@+id/addGameOpponentIcon"/>
+
+        <ImageView
+            android:id="@+id/addGameDateIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableAddGameDateIcon"
+            android:layout_below="@+id/addGameOpponentText"
+            android:layout_alignLeft="@+id/addGameOpponentIcon"
+            android:layout_alignStart="@+id/addGameOpponentIcon"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <EditText
+            android:id="@+id/addGameDateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_game_date"
+            android:inputType="date"
+            android:focusable="false"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignBottom="@+id/addGameDateIcon"
+            android:layout_alignLeft="@+id/addGameOpponentText"
+            android:layout_alignStart="@+id/addGameOpponentText" />
+
+        <ImageView
+            android:id="@+id/addGameScoreIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableAddGameScoreIcon"
+            android:layout_below="@+id/addGameDateIcon"
+            android:layout_alignLeft="@+id/addGameDateIcon"
+            android:layout_alignStart="@+id/addGameDateIcon"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <EditText
+            android:id="@+id/addGameScoreText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_game_score"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignBottom="@+id/addGameScoreIcon"
+            android:layout_alignLeft="@+id/addGameDateText"
+            android:layout_alignStart="@+id/addGameDateText"  />
+
+        <ImageView
+            android:id="@+id/addGameGoalsIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableAddGameGoalsIcon"
+            android:layout_below="@+id/addGameScoreIcon"
+            android:layout_alignLeft="@+id/addGameScoreIcon"
+            android:layout_alignStart="@+id/addGameScoreIcon"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <EditText
+            android:id="@+id/addGameGoalsText"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_game_goals"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignBottom="@+id/addGameGoalsIcon"
+            android:layout_alignLeft="@+id/addGameScoreText"
+            android:layout_alignStart="@+id/addGameScoreText" />
+
+        <ImageView
+            android:id="@+id/addGameAssistsIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableAddGameAssistsIcon"
+            android:layout_below="@+id/addGameGoalsIcon"
+            android:layout_alignLeft="@+id/addGameGoalsIcon"
+            android:layout_alignStart="@+id/addGameGoalsIcon"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <EditText
+            android:id="@+id/addGameAssistsText"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_game_assists"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignBottom="@+id/addGameAssistsIcon"
+            android:layout_alignLeft="@+id/addGameGoalsText"
+            android:layout_alignStart="@+id/addGameGoalsText" />
+
+        <ImageView
+            android:id="@+id/addGamePlaytimeIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableAddGamePlaytimeIcon"
+            android:layout_below="@+id/addGameAssistsIcon"
+            android:layout_alignLeft="@+id/addGameAssistsIcon"
+            android:layout_alignStart="@+id/addGameAssistsIcon"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <EditText
+            android:id="@+id/addGamePlaytimeText"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_game_playtime"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignBottom="@+id/addGamePlaytimeIcon"
+            android:layout_alignLeft="@+id/addGameAssistsText"
+            android:layout_alignStart="@+id/addGameAssistsText" />
+
+        <ImageView
+            android:id="@+id/addGameBonusIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableAddGameBonusIcon"
+            android:layout_below="@+id/addGamePlaytimeIcon"
+            android:layout_alignLeft="@+id/addGamePlaytimeIcon"
+            android:layout_alignStart="@+id/addGamePlaytimeIcon"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <EditText
+            android:id="@+id/addGameBonusText"
+            android:layout_width="match_parent"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_game_bonus"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignBottom="@+id/addGameBonusIcon"
+            android:layout_alignLeft="@+id/addGamePlaytimeText"
+            android:layout_alignStart="@+id/addGamePlaytimeText" />
+
+        <ImageView
+            android:id="@+id/addGamePositionIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableAddGamePositionIcon"
+            android:layout_below="@+id/addGameBonusIcon"
+            android:layout_alignLeft="@+id/addGameBonusIcon"
+            android:layout_alignStart="@+id/addGameBonusIcon"
+            android:layout_marginTop="@dimen/very_large_padding" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addGamePosition"
+            android:entries="@array/positions"
+            android:prompt="@string/add_game_position"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignTop="@+id/addGamePositionIcon"
+            android:layout_alignLeft="@+id/addGameBonusText"
+            android:layout_alignStart="@+id/addGameBonusText" />
+
+        <ImageView
+            android:id="@+id/addGameCategoriesIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableAddGameCategoryIcon"
+            android:layout_below="@+id/addGamePositionIcon"
+            android:layout_alignLeft="@+id/addGamePositionIcon"
+            android:layout_alignStart="@+id/addGamePositionIcon"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addGameCategoryPosition"
+            android:entries="@array/categories"
+            android:prompt="@string/add_game_category"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignTop="@+id/addGameCategoriesIcon"
+            android:layout_alignLeft="@+id/addGamePosition"
+            android:layout_alignStart="@+id/addGamePosition" />
+
+        <ImageView
+            android:id="@+id/addGameYellowCardIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="@drawable/yellow_card"
+            android:layout_below="@+id/addGameCategoriesIcon"
+            android:layout_alignLeft="@+id/addGameCategoriesIcon"
+            android:layout_alignStart="@+id/addGameCategoriesIcon"
+            android:layout_marginTop="@dimen/very_large_padding" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addGameYellowCard"
+            android:layout_alignBottom="@+id/addGameYellowCardIcon"
+            android:layout_alignLeft="@+id/addGameCategoryPosition"
+            android:layout_alignStart="@+id/addGameCategoryPosition"
+            android:max="2"
+            android:stepSize="1"
+            android:layout_toLeftOf="@+id/addGameYellowCardsNr"
+            android:layout_toStartOf="@+id/addGameYellowCardsNr" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addGameYellowCardsNr"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:layout_marginLeft="@dimen/large_padding"
+            android:layout_marginStart="@dimen/large_padding"
+            android:layout_marginRight="@dimen/inline_padding"
+            android:layout_marginEnd="@dimen/inline_padding"
+            android:layout_alignTop="@+id/addGameYellowCard"
+            android:layout_alignRight="@+id/addGamePosition"
+            android:layout_alignEnd="@+id/addGamePosition" />
+
+        <ImageView
+            android:id="@+id/addGameRedCardIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="@drawable/red_card"
+            android:layout_below="@+id/addGameYellowCardIcon"
+            android:layout_alignLeft="@+id/addGameYellowCardIcon"
+            android:layout_alignStart="@+id/addGameYellowCardIcon"
+            android:layout_marginTop="@dimen/very_large_padding"  />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addGameRedCardCheck"
+            android:layout_alignBottom="@+id/addGameRedCardIcon"
+            android:layout_alignLeft="@+id/addGameYellowCard"
+            android:layout_alignStart="@+id/addGameYellowCard" />
+
+        <Button
+            android:id="@+id/addGameSaveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addGameRedCardIcon"
+            android:layout_alignLeft="@+id/addGameRedCardIcon"
+            android:layout_alignStart="@+id/addGameRedCardIcon"
+            android:layout_marginTop="@dimen/large_padding"
+            android:text="@string/action_save" />
+
+    </RelativeLayout>
+</ScrollView>

@@ -19,8 +19,20 @@
     <attr name="drawableGlobalStats" format="reference" />
     <attr name="drawableSettings" format="reference" />
     <attr name="drawableHelp" format="reference" />
-    <attr name="drawableGoalsIcon" format="reference" />
-    <attr name="drawablePositionIcon" format="reference" />
+    <attr name="drawableAddGameGoalsIcon" format="reference" />
+    <attr name="drawableAddGamePositionIcon" format="reference" />
+    <attr name="drawableAddGamePlaytimeIcon" format="reference" />
     <attr name="drawableAddGameOpponentIcon" format="reference" />
+    <attr name="drawableAddGameScoreIcon" format="reference" />
+    <attr name="drawableAddGameDateIcon" format="reference" />
+    <attr name="drawableAddGameCategoryIcon" format="reference" />
+    <attr name="drawableAddGameBonusIcon" format="reference" />
+    <attr name="drawableAddGameAssistsIcon" format="reference" />
+    <attr name="drawableProfile" format="reference" />
+    <attr name="drawableGender" format="reference" />
+    <attr name="drawableProfileEmail" format="reference" />
+    <attr name="drawableProfileLocation" format="reference" />
+    <attr name="drawableProfileWeight" format="reference" />
+    <attr name="drawableProfileLength" format="reference" />
 
 </resources>

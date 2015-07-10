@@ -30,6 +30,9 @@
         <!-- Text -->
         <item name="android:textAppearance">@style/TextAppearance</item>
 
+        <!-- Dialog -->
+        <item name="android:dialogTheme">@style/Footistics.DialogTheme</item>
+
         <!-- Colors -->
         <item name="ftColorBackgroundDrawer">@color/ft_navbar_background</item>
         <item name="ftColorAccountTextDrawer">@color/ft_drawer_account_text</item>
@@ -44,13 +47,25 @@
         <item name="drawableAddIcon">@drawable/ic_action_add</item>
         <item name="drawableAccount">@drawable/ic_person_grey600_48dp</item>
         <item name="drawableDivider">@drawable/divider</item>
-        <item name="drawableSeasonalStats">@drawable/ic_event_white_24dp</item>
-        <item name="drawableGlobalStats">@drawable/ic_assessment_white_24dp</item>
+        <item name="drawableSeasonalStats">@drawable/ic_chart_line_white_24dp</item>
+        <item name="drawableGlobalStats">@drawable/ic_chart_pie_white_24dp</item>
         <item name="drawableSettings">@drawable/ic_action_settings</item>
         <item name="drawableHelp">@drawable/ic_action_help</item>
-        <item name="drawableGoalsIcon">@drawable/goal</item>
-        <item name="drawablePositionIcon">@drawable/field</item>
+        <item name="drawableAddGameGoalsIcon">@drawable/goal</item>
+        <item name="drawableAddGamePositionIcon">@drawable/field</item>
+        <item name="drawableAddGamePlaytimeIcon">@drawable/ic_timer_white_24dp</item>
         <item name="drawableAddGameOpponentIcon">@drawable/ic_group_white_24dp</item>
+        <item name="drawableAddGameScoreIcon">@drawable/ic_clipboard_outline_white_24dp</item>
+        <item name="drawableAddGameDateIcon">@drawable/ic_event_white_24dp</item>
+        <item name="drawableAddGameCategoryIcon">@drawable/ic_tag_outline_white_24dp</item>
+        <item name="drawableAddGameBonusIcon">@drawable/ic_cash_multiple_white_24dp</item>
+        <item name="drawableAddGameAssistsIcon">@drawable/assist</item>
+        <item name="drawableProfile">@drawable/ic_person_white_48dp</item>
+        <item name="drawableGender">@drawable/ic_human_male_female_white_24dp</item>
+        <item name="drawableProfileEmail">@drawable/ic_email_white_24dp</item>
+        <item name="drawableProfileLocation">@drawable/ic_map_marker_radius_white_24dp</item>
+        <item name="drawableProfileWeight">@drawable/ic_weight_kilogram_white_24dp</item>
+        <item name="drawableProfileLength">@drawable/ic_ruler_white_24dp</item>
 
     </style>
 
@@ -86,6 +101,9 @@
         <!-- Text -->
         <item name="android:textAppearance">@style/TextAppearance</item>
 
+        <!-- Dialog -->
+        <item name="android:dialogTheme">@style/Footistics.DialogTheme</item>
+
         <!-- Colors -->
         <item name="ftColorBackgroundDrawer">@color/ft_navbar_background_inverse</item>
         <item name="ftColorAccountTextDrawer">@color/ft_drawer_account_text</item>
@@ -100,13 +118,25 @@
         <item name="drawableAddIcon">@drawable/ic_action_add_inverse</item>
         <item name="drawableAccount">@drawable/ic_person_grey600_48dp</item>
         <item name="drawableDivider">@drawable/divider_light</item>
-        <item name="drawableSeasonalStats">@drawable/ic_event_grey600_24dp</item>
-        <item name="drawableGlobalStats">@drawable/ic_assessment_grey600_24dp</item>
+        <item name="drawableSeasonalStats">@drawable/ic_chart_line_grey600_24dp</item>
+        <item name="drawableGlobalStats">@drawable/ic_chart_pie_grey600_24dp</item>
         <item name="drawableSettings">@drawable/ic_action_settings_inverse</item>
         <item name="drawableHelp">@drawable/ic_action_help_inverse</item>
-        <item name="drawableGoalsIcon">@drawable/goal_inverse</item>
-        <item name="drawablePositionIcon">@drawable/field_inverse</item>
+        <item name="drawableAddGameGoalsIcon">@drawable/goal_inverse</item>
+        <item name="drawableAddGamePositionIcon">@drawable/field_inverse</item>
+        <item name="drawableAddGamePlaytimeIcon">@drawable/ic_timer_grey600_24dp</item>
         <item name="drawableAddGameOpponentIcon">@drawable/ic_group_grey600_24dp</item>
+        <item name="drawableAddGameScoreIcon">@drawable/ic_clipboard_outline_grey600_24dp</item>
+        <item name="drawableAddGameDateIcon">@drawable/ic_event_grey600_24dp</item>
+        <item name="drawableAddGameCategoryIcon">@drawable/ic_tag_outline_grey600_24dp</item>
+        <item name="drawableAddGameBonusIcon">@drawable/ic_cash_multiple_grey600_24dp</item>
+        <item name="drawableAddGameAssistsIcon">@drawable/assist_inverse</item>
+        <item name="drawableProfile">@drawable/ic_person_grey600_48dp</item>
+        <item name="drawableGender">@drawable/ic_human_male_female_grey600_24dp</item>
+        <item name="drawableProfileEmail">@drawable/ic_email_grey600_24dp</item>
+        <item name="drawableProfileLocation">@drawable/ic_map_marker_radius_grey600_24dp</item>
+        <item name="drawableProfileWeight">@drawable/ic_weight_kilogram_grey600_24dp</item>
+        <item name="drawableProfileLength">@drawable/ic_ruler_grey600_24dp</item>
 
     </style>
 

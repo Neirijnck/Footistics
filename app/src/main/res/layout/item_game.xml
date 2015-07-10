@@ -10,7 +10,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="105dp">
+        android:minHeight="@dimen/gamesgrid_columnHeight"
+        android:background="@color/ft_accent">
 
         <ImageView
             android:id="@+id/game_clubicon"
@@ -64,7 +65,7 @@
             android:layout_below="@id/game_clubname_opponent"
             android:layout_toRightOf="@id/game_clubicon"
             android:layout_toEndOf="@id/game_clubicon"
-            android:src="?attr/drawableGoalsIcon" />
+            android:src="?attr/drawableAddGameGoalsIcon" />
 
         <TextView
             android:id="@+id/game_nr_goals"
@@ -85,7 +86,7 @@
             android:layout_toRightOf="@id/game_nr_goals"
             android:layout_toEndOf="@id/game_nr_goals"
             android:layout_marginLeft="@dimen/default_padding"
-            android:src="?attr/drawablePositionIcon"/>
+            android:src="?attr/drawableAddGamePositionIcon"/>
 
         <TextView
             android:id="@+id/game_position"
@@ -96,7 +97,7 @@
             android:layout_toRightOf="@id/game_position_icon"
             android:layout_toEndOf="@id/game_position_icon"
             android:layout_below="@id/game_clubname_opponent"
-            tools:text="@string/goals"/>
+            tools:text="@string/add_game_position"/>
 
         <ImageView
             android:id="@+id/game_yellow_card_icon"

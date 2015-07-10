@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/profileHeadContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/large_padding"
+            android:background="@color/ft_accent_dark">
+
+            <com.pkmmte.view.CircularImageView
+                android:id="@+id/profileImgCircular"
+                android:layout_width="@dimen/profile_image"
+                android:layout_height="@dimen/profile_image"
+                android:scaleType="centerInside"
+                android:src="?attr/drawableAccount"
+                app:border="true"
+                app:border_width="2dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/very_large_padding"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12pt"
+                android:id="@+id/profileName"
+                android:layout_marginTop="@dimen/default_padding"
+                android:layout_below="@+id/profileImgCircular"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/ft_tab_text" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profileName"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/profileInfoContainer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8pt"
+                    android:id="@+id/profileInfoAge"
+                    android:textColor="@color/ft_tab_text"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8pt"
+                    android:id="@+id/profileInfoGender"
+                    android:textColor="@color/ft_tab_text"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/profileInfoAge"
+                    android:layout_toEndOf="@+id/profileInfoAge" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profileInfoContainer"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/profileGames"
+                    android:layout_width="@dimen/profile_icon_size"
+                    android:layout_height="@dimen/profile_icon_size"
+                    android:src="?attr/drawableAddGameGoalsIcon"
+                    android:layout_marginTop="@dimen/large_padding" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="6pt"
+                    android:id="@+id/profileInfoLastGame"
+                    android:text="@string/profile_last_game"
+                    android:textColor="@color/ft_tab_text"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="@dimen/very_small_padding"
+                    android:layout_toRightOf="@+id/profileGames"
+                    android:layout_toEndOf="@+id/profileGames"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:layout_marginStart="@dimen/default_padding"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="6pt"
+                    android:id="@+id/profileInfoLastGameName"
+                    android:textColor="@color/ft_tab_text"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="@dimen/very_small_padding"
+                    android:layout_toRightOf="@+id/profileInfoLastGame"
+                    android:layout_toEndOf="@+id/profileInfoLastGame"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/large_padding"
+            android:layout_below="@+id/profileHeadContainer"
+            android:layout_margin="@dimen/large_padding">
+
+            <ImageView
+                android:id="@+id/profileInfoBirthday"
+                android:layout_width="@dimen/add_game_icon_size"
+                android:layout_height="@dimen/add_game_icon_size"
+                android:src="?attr/drawableAddGameDateIcon"
+                android:layout_marginTop="@dimen/large_padding" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

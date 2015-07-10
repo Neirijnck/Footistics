@@ -16,6 +16,15 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Footistics" >
 
+        <!-- Profile -->
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:label="@string/profile" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.SeasonalStatsActivity" />
+        </activity>
+
         <!-- Seasonal Statistics -->
         <activity android:name=".ui.SeasonalStatsActivity" >
             <intent-filter>

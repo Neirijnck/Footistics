@@ -102,7 +102,7 @@ public class FootisticsDatabase extends SQLiteOpenHelper{
 
             + FootisticsContract.GamesColumns.CATEGORY + " TEXT,"
 
-            + FootisticsContract.GamesColumns.POSITION + " INTEGER DEFAULT 0,"
+            + FootisticsContract.GamesColumns.POSITION + " TEXT,"
 
             + FootisticsContract.GamesColumns.PLAYTIME + " INTEGER DEFAULT 0,"
 

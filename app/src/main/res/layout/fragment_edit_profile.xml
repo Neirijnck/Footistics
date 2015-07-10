@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<prebenneirijnck.be.footistics.widgets.NotifyingScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/editProfileScrollView">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants"
+        android:paddingBottom="@dimen/large_padding">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="240dp"
+            android:id="@+id/profileImg"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/preben"
+            android:scaleType="centerCrop"/>
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/buttonProfileImgEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_photo_camera_white_24dp"
+            fab:fab_colorNormal="?attr/colorAccent"
+            fab:fab_colorPressed="?attr/ftColorBackgroundFabPressed"
+            fab:fab_colorRipple="?attr/colorControlHighlight"
+            android:layout_alignBottom="@+id/profileImg"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/fab_margin_right"
+            android:layout_marginEnd="@dimen/fab_margin_right"
+            android:layout_marginBottom="@dimen/fab_margin_bottom_negative"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18pt"
+            android:id="@+id/profileName"
+            tools:text="Preben"
+            android:layout_alignLeft="@+id/profileSubInfo"
+            android:layout_alignStart="@+id/profileSubInfo"
+            android:layout_above="@id/profileSubInfo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:id="@+id/profileSubInfo"
+            android:layout_alignBottom="@+id/profileImg"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/very_large_padding"
+            android:layout_marginStart="@dimen/very_large_padding"
+            android:layout_marginBottom="@dimen/very_large_padding"
+            tools:text="Man, 21 jaar"/>
+
+        <ImageView
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableProfile"
+            android:id="@+id/profileIconNames"
+            android:layout_alignBottom="@+id/profileFirstName"
+            android:layout_alignLeft="@+id/profileSubInfo"
+            android:layout_alignStart="@+id/profileSubInfo" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/profile_firstname"
+            android:ems="10"
+            android:id="@+id/profileFirstName"
+            android:layout_toEndOf="@+id/profileIconNames"
+            android:layout_toRightOf="@+id/profileIconNames"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/very_large_padding"
+            android:layout_below="@+id/profileImg"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/profile_lastname"
+            android:ems="10"
+            android:id="@+id/profileLastName"
+            android:layout_below="@+id/profileIconNames"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_marginTop="@dimen/large_padding"
+            android:layout_alignLeft="@+id/profileFirstName"
+            android:layout_alignStart="@+id/profileFirstName" />
+
+        <ImageView
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableGender"
+            android:id="@+id/profileIconGender"
+            android:layout_alignTop="@+id/profileRdgGender"
+            android:layout_alignLeft="@+id/profileIconNames"
+            android:layout_alignStart="@+id/profileIconNames" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileRdgGender"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_marginTop="@dimen/very_large_padding"
+            android:layout_below="@+id/profileLastName"
+            android:layout_alignLeft="@+id/profileLastName"
+            android:layout_alignStart="@+id/profileLastName">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_gender_male"
+                android:id="@+id/profileRdbMale"
+                android:checked="true"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_gender_female"
+                android:id="@+id/profileRdbFemale" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/profileDateIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableAddGameDateIcon"
+            android:layout_below="@+id/profileRdgGender"
+            android:layout_alignLeft="@+id/profileIconGender"
+            android:layout_alignStart="@+id/profileIconGender"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <EditText
+            android:id="@+id/profileDateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/profile_birthday"
+            android:inputType="date"
+            android:focusable="false"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignBottom="@+id/profileDateIcon"
+            android:layout_alignLeft="@+id/profileRdgGender"
+            android:layout_alignStart="@+id/profileRdgGender" />
+
+        <ImageView
+            android:id="@+id/profileEmailIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableProfileEmail"
+            android:layout_below="@+id/profileDateIcon"
+            android:layout_alignLeft="@+id/profileDateIcon"
+            android:layout_alignStart="@+id/profileDateIcon"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <EditText
+            android:id="@+id/profileEmailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/profile_email"
+            android:inputType="textEmailAddress"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignBottom="@+id/profileEmailIcon"
+            android:layout_alignLeft="@+id/profileDateText"
+            android:layout_alignStart="@+id/profileDateText" />
+
+        <ImageView
+            android:id="@+id/profileLocationIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableProfileLocation"
+            android:layout_below="@+id/profileEmailIcon"
+            android:layout_alignLeft="@+id/profileEmailIcon"
+            android:layout_alignStart="@+id/profileEmailIcon"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <EditText
+            android:id="@+id/profileLocationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/profile_location"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignBottom="@+id/profileLocationIcon"
+            android:layout_alignLeft="@+id/profileEmailText"
+            android:layout_alignStart="@+id/profileEmailText" />
+
+        <ImageView
+            android:id="@+id/profileWeightIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableProfileWeight"
+            android:layout_below="@+id/profileLocationIcon"
+            android:layout_alignLeft="@+id/profileLocationIcon"
+            android:layout_alignStart="@+id/profileLocationIcon"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <EditText
+            android:id="@+id/profileWeightText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/profile_weight"
+            android:inputType="numberDecimal"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignBottom="@+id/profileWeightIcon"
+            android:layout_alignLeft="@+id/profileEmailText"
+            android:layout_alignStart="@+id/profileEmailText" />
+
+        <ImageView
+            android:id="@+id/profileLengthIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableProfileLength"
+            android:layout_below="@+id/profileWeightIcon"
+            android:layout_alignLeft="@+id/profileWeightIcon"
+            android:layout_alignStart="@+id/profileWeightIcon"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <EditText
+            android:id="@+id/profileLengthText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/profile_length"
+            android:inputType="numberDecimal"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignBottom="@+id/profileLengthIcon"
+            android:layout_alignLeft="@+id/profileWeightText"
+            android:layout_alignStart="@+id/profileWeightText" />
+
+        <ImageView
+            android:id="@+id/profilePositionIcon"
+            android:layout_width="@dimen/add_game_icon_size"
+            android:layout_height="@dimen/add_game_icon_size"
+            android:src="?attr/drawableAddGamePositionIcon"
+            android:layout_below="@+id/profileLengthIcon"
+            android:layout_alignLeft="@+id/profileLengthIcon"
+            android:layout_alignStart="@+id/profileLengthIcon"
+            android:layout_marginTop="@dimen/very_large_padding"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profilePosition"
+            android:entries="@array/positions"
+            android:prompt="@string/add_game_position"
+            android:layout_marginRight="@dimen/very_large_padding"
+            android:layout_marginEnd="@dimen/very_large_padding"
+            android:layout_alignTop="@+id/profilePositionIcon"
+            android:layout_alignLeft="@+id/profileLengthText"
+            android:layout_alignStart="@+id/profileLengthText" />
+
+        <Button
+            android:id="@+id/profileSaveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profilePositionIcon"
+            android:layout_alignLeft="@+id/profilePositionIcon"
+            android:layout_alignStart="@+id/profilePositionIcon"
+            android:layout_marginTop="@dimen/large_padding"
+            android:text="@string/action_save" />
+
+    </RelativeLayout>
+</prebenneirijnck.be.footistics.widgets.NotifyingScrollView>

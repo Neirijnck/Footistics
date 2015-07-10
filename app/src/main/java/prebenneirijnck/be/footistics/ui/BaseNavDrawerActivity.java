@@ -101,7 +101,7 @@ public abstract class BaseNavDrawerActivity extends BaseActivity implements Adap
         switch(position){
             case MENU_ITEM_ACCOUNT:
             {
-//                launchIntent = new Intent(this, .class);
+                launchIntent = new Intent(this, ProfileActivity.class);
                 Utils.trackAction(this, TAG_NAV_DRAWER, "Account");
                 break;
             }

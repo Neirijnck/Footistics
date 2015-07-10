@@ -57,4 +57,12 @@
         <item name="android:scrollbarStyle">outsideInset</item>
     </style>
 
+    <!-- Styles for pop-up dialogs -->
+    <style name="Footistics.DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+
+        <item name="colorPrimary">@color/ft_accent</item>
+        <item name="colorPrimaryDark">@color/ft_primary_dark</item>
+        <item name="colorAccent">@color/ft_primary</item>
+    </style>
+
 </resources>
