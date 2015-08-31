@@ -1,8 +1,12 @@
 package prebenneirijnck.be.footistics.ui;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,11 +18,16 @@ import android.widget.GridView;
 import com.melnykov.fab.FloatingActionButton;
 
 import prebenneirijnck.be.footistics.R;
+import prebenneirijnck.be.footistics.adapters.GamesAdapter;
+import prebenneirijnck.be.footistics.provider.FootisticsContract;
 import prebenneirijnck.be.footistics.util.Utils;
 
-public class GamesFragment extends Fragment {
+public class GamesFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>{
 
     private static final String TAG = "Games";
+    private static final int GAMES_LOADER = 0;
+
+    private GamesAdapter mAdapter;
 
     private GridView mGrid;
 
@@ -33,6 +42,8 @@ public class GamesFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        getLoaderManager().initLoader(GAMES_LOADER, null, this);
+
         View v =  inflater.inflate(R.layout.fragment_games, container, false);
 
         v.findViewById(R.id.emptyViewGames).setOnClickListener(new View.OnClickListener() {
@@ -49,10 +60,13 @@ public class GamesFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        // setup grid view
+        // Setup grid view
         mGrid = (GridView) getView().findViewById(R.id.listGames);
 
-        // setup floating action button for adding games
+        // Setting the adapter
+        mGrid.setAdapter(mAdapter);
+
+        // Setup floating action button for adding games
         final FloatingActionButton buttonAddGame = (FloatingActionButton) getView().findViewById(R.id.buttonGamesAdd);
         buttonAddGame.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +91,7 @@ public class GamesFragment extends Fragment {
         int itemId = item.getItemId();
         if(itemId == R.id.menu_action_filter_games){
             fireTrackerEventAction("Filter games");
-            // not handled here
+            // Not handled here
             return super.onOptionsItemSelected(item);
         }
         return super.onOptionsItemSelected(item);
@@ -87,4 +101,24 @@ public class GamesFragment extends Fragment {
         Utils.trackAction(getActivity(), TAG, label);
     }
 
+    @Override
+    public Loader<Cursor> onCreateLoader(int loaderId, Bundle args) {
+        switch (loaderId) {
+            case GAMES_LOADER:
+                return new CursorLoader(getActivity(), FootisticsContract.Games.CONTENT_URI, GamesAdapter.GamesQuery.PROJECTION, null, null, null);
+            default:
+                // An invalid id was passed in
+                return null;
+        }
+    }
+
+    @Override
+    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+        mAdapter.swapCursor(data);
+    }
+
+    @Override
+    public void onLoaderReset(Loader<Cursor> loader) {
+        mAdapter.swapCursor(null);
+    }
 }

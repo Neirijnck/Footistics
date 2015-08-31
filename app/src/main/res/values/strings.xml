@@ -5,6 +5,7 @@
     <string name="app_name">Footistics</string>
 
     <!-- Actions -->
+    <string name="action_login">Login</string>
     <string name="action_add_game">Add game</string>
     <string name="action_filter_games">Filter games</string>
     <string name="action_edit">Edit</string>
@@ -29,6 +30,10 @@
     <string name="pref_theme">Theme</string>
     <string name="pref_theme_default">Footistics</string>
     <string name="pref_theme_light">Footistics Light</string>
+
+    <!-- Login -->
+    <string name="login">Login</string>
+    <string name="permission">We don\'t post anything without your permission.</string>
 
     <!-- Games -->
     <string name="game">Fc Eendracht Kuurne</string>

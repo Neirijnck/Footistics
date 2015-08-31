@@ -115,14 +115,136 @@
             android:layout_height="match_parent"
             android:paddingBottom="@dimen/large_padding"
             android:layout_below="@+id/profileHeadContainer"
-            android:layout_margin="@dimen/large_padding">
+            android:layout_marginLeft="@dimen/large_padding"
+            android:layout_marginRight="@dimen/large_padding"
+            android:layout_marginTop="@dimen/large_padding"
+            android:layout_alignParentBottom="true">
 
             <ImageView
-                android:id="@+id/profileInfoBirthday"
+                android:id="@+id/profileInfoBirthdayIcon"
                 android:layout_width="@dimen/add_game_icon_size"
                 android:layout_height="@dimen/add_game_icon_size"
                 android:src="?attr/drawableAddGameDateIcon"
-                android:layout_marginTop="@dimen/large_padding" />
+                android:layout_marginTop="@dimen/default_padding" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileInfoBirthdayText"
+                android:text="11/01/1994"
+                android:textSize="8pt"
+                android:textColor="@color/ft_tab_text"
+                android:layout_alignTop="@+id/profileInfoBirthdayIcon"
+                android:layout_toRightOf="@+id/profileInfoBirthdayIcon"
+                android:layout_toEndOf="@+id/profileInfoBirthdayIcon"
+                android:layout_marginLeft="@dimen/large_padding"
+                android:layout_marginTop="@dimen/inline_padding"/>
+
+            <ImageView
+                android:id="@+id/profileInfoPositionIcon"
+                android:layout_width="@dimen/add_game_icon_size"
+                android:layout_height="@dimen/add_game_icon_size"
+                android:src="?attr/drawableAddGamePositionIcon"
+                android:layout_below="@+id/profileInfoBirthdayIcon"
+                android:layout_marginTop="@dimen/large_padding"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileInfoPositionText"
+                android:text="Defensive midfield"
+                android:textSize="8pt"
+                android:textColor="@color/ft_tab_text"
+                android:layout_alignTop="@+id/profileInfoPositionIcon"
+                android:layout_toRightOf="@+id/profileInfoPositionIcon"
+                android:layout_toEndOf="@+id/profileInfoPositionIcon"
+                android:layout_marginLeft="@dimen/large_padding"
+                android:layout_marginTop="@dimen/inline_padding"/>
+
+            <ImageView
+                android:id="@+id/profileInfoLocationIcon"
+                android:layout_width="@dimen/add_game_icon_size"
+                android:layout_height="@dimen/add_game_icon_size"
+                android:src="?attr/drawableProfileLocation"
+                android:layout_below="@+id/profileInfoPositionIcon"
+                android:layout_marginTop="@dimen/large_padding"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileInfoLocationText"
+                android:text="Kuurne"
+                android:textSize="8pt"
+                android:textColor="@color/ft_tab_text"
+                android:layout_alignTop="@+id/profileInfoLocationIcon"
+                android:layout_toRightOf="@+id/profileInfoLocationIcon"
+                android:layout_toEndOf="@+id/profileInfoLocationIcon"
+                android:layout_marginLeft="@dimen/large_padding"
+                android:layout_marginTop="@dimen/inline_padding"/>
+
+            <ImageView
+                android:id="@+id/profileInfoLengthIcon"
+                android:layout_width="@dimen/add_game_icon_size"
+                android:layout_height="@dimen/add_game_icon_size"
+                android:src="?attr/drawableProfileLength"
+                android:layout_alignTop="@+id/profileInfoBirthdayIcon"
+                android:layout_toLeftOf="@+id/profileInfoLengthText"
+                android:layout_toStartOf="@+id/profileInfoLengthText"
+                android:layout_marginRight="@dimen/large_padding"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileInfoLengthText"
+                android:text="1,70m"
+                android:textSize="8pt"
+                android:textColor="@color/ft_tab_text"
+                android:layout_alignTop="@+id/profileInfoBirthdayText"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/very_large_padding"/>
+
+            <ImageView
+                android:id="@+id/profileInfoWeightIcon"
+                android:layout_width="@dimen/add_game_icon_size"
+                android:layout_height="@dimen/add_game_icon_size"
+                android:src="?attr/drawableProfileWeight"
+                android:layout_alignTop="@+id/profileInfoPositionIcon"
+                android:layout_alignLeft="@+id/profileInfoLengthIcon"
+                android:layout_alignStart="@+id/profileInfoLengthIcon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileInfoWeightText"
+                android:text="65kg"
+                android:textSize="8pt"
+                android:textColor="@color/ft_tab_text"
+                android:layout_marginTop="@dimen/small_padding"
+                android:layout_alignTop="@+id/profileInfoPositionText"
+                android:layout_alignLeft="@+id/profileInfoLengthText"
+                android:layout_alignStart="@+id/profileInfoLengthText" />
+
+            <ImageView
+                android:id="@+id/profileInfoGenderIcon"
+                android:layout_width="@dimen/add_game_icon_size"
+                android:layout_height="@dimen/add_game_icon_size"
+                android:src="?attr/drawableGender"
+                android:layout_alignTop="@+id/profileInfoLocationIcon"
+                android:layout_alignLeft="@+id/profileInfoWeightIcon"
+                android:layout_alignStart="@+id/profileInfoWeightIcon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileInfoGenderText"
+                android:text="Male"
+                android:textSize="8pt"
+                android:textColor="@color/ft_tab_text"
+                android:layout_marginTop="@dimen/inline_padding"
+                android:layout_alignTop="@+id/profileInfoGenderIcon"
+                android:layout_alignLeft="@+id/profileInfoLengthText"
+                android:layout_alignStart="@+id/profileInfoLengthText" />
 
         </RelativeLayout>
     </RelativeLayout>

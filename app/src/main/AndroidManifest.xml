@@ -16,6 +16,19 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Footistics" >
 
+        <!-- Login -->
+        <activity
+            android:name=".ui.LoginActivity"
+            android:label="@string/login"
+            android:noHistory="true"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <!-- Profile -->
         <activity
             android:name=".ui.ProfileActivity"
@@ -27,11 +40,11 @@
 
         <!-- Seasonal Statistics -->
         <activity android:name=".ui.SeasonalStatsActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
 
         <activity

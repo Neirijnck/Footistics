@@ -59,7 +59,7 @@ public class GamesAdapter extends CursorAdapter{
         viewHolder.redCards.setText(cursor.getString(GamesQuery.REDCARD));
     }
 
-    private interface GamesQuery{
+    public interface GamesQuery{
         String[] PROJECTION = {
                 BaseColumns._ID,
                 FootisticsContract.Games.OPPONENT,
