@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--Text Colors-->
+    <attr name="ftTextColorSecondaryDim" format="reference|color" />
+
     <!-- Colors -->
     <attr name="ftColorBackgroundDrawer" format="reference|color" />
     <attr name="ftColorAccountTextDrawer" format="reference|color" />

@@ -34,6 +34,7 @@
         <item name="android:dialogTheme">@style/Footistics.DialogTheme</item>
 
         <!-- Colors -->
+        <item name="ftTextColorSecondaryDim">@color/text_secondary_disabled_dark</item>
         <item name="ftColorBackgroundDrawer">@color/ft_navbar_background</item>
         <item name="ftColorAccountTextDrawer">@color/ft_drawer_account_text</item>
         <item name="ftColorBackgroundTabs">@color/ft_primary</item>
@@ -105,6 +106,7 @@
         <item name="android:dialogTheme">@style/Footistics.DialogTheme</item>
 
         <!-- Colors -->
+        <item name="ftTextColorSecondaryDim">@color/text_secondary_disabled_light</item>
         <item name="ftColorBackgroundDrawer">@color/ft_navbar_background_inverse</item>
         <item name="ftColorAccountTextDrawer">@color/ft_drawer_account_text</item>
         <item name="ftColorBackgroundTabs">@color/ft_primary</item>

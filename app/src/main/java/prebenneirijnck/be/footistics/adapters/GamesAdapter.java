@@ -33,7 +33,8 @@ public class GamesAdapter extends CursorAdapter{
 
         ViewHolder viewHolder = new ViewHolder();
         viewHolder.opponent = (TextView) v.findViewById(R.id.game_clubname_opponent);
-        viewHolder.myTeam = (TextView) v.findViewById(R.id.game_clubname);
+        viewHolder.date = (TextView) v.findViewById(R.id.game_date);
+        viewHolder.category = (TextView) v.findViewById(R.id.game_category);
         viewHolder.score = (TextView) v.findViewById(R.id.game_score);
         viewHolder.goals = (TextView) v.findViewById(R.id.game_nr_goals);
         viewHolder.position = (TextView) v.findViewById(R.id.game_position);
@@ -52,6 +53,8 @@ public class GamesAdapter extends CursorAdapter{
         ViewHolder viewHolder = (ViewHolder) view.getTag();
 
         viewHolder.opponent.setText(cursor.getString(GamesQuery.OPPONENT));
+        viewHolder.date.setText(cursor.getString(GamesQuery.DATE));
+        viewHolder.category.setText(cursor.getString(GamesQuery.CATEGORY));
         viewHolder.score.setText(cursor.getString(GamesQuery.RESULT));
         viewHolder.goals.setText(cursor.getString(GamesQuery.GOALS));
         viewHolder.position.setText(cursor.getString(GamesQuery.POSITION));
@@ -63,6 +66,8 @@ public class GamesAdapter extends CursorAdapter{
         String[] PROJECTION = {
                 BaseColumns._ID,
                 FootisticsContract.Games.OPPONENT,
+                FootisticsContract.Games.DATE,
+                FootisticsContract.Games.CATEGORY,
                 FootisticsContract.Games.RESULT,
                 FootisticsContract.Games.GOALS,
                 FootisticsContract.Games.POSITION,
@@ -72,18 +77,22 @@ public class GamesAdapter extends CursorAdapter{
 
         int _ID = 0;
         int OPPONENT = 1;
-        int RESULT = 2;
-        int GOALS = 3;
-        int POSITION = 4;
-        int YELLOWCARDS = 5;
-        int REDCARD = 6;
+        int DATE = 2;
+        int CATEGORY = 3;
+        int RESULT = 4;
+        int GOALS = 5;
+        int POSITION = 6;
+        int YELLOWCARDS = 7;
+        int REDCARD = 8;
     }
 
     public static class ViewHolder{
 
         public TextView opponent;
 
-        public TextView myTeam;
+        public TextView date;
+
+        public TextView category;
 
         public TextView score;
 

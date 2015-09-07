@@ -32,7 +32,7 @@
 
     <GridView
         android:id="@+id/listGames"
-        style="@style/Widget.Footistics.CardGrid.FastScroll"
+        style="@style/Widget.Footistics.CardGrid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:columnWidth="@dimen/gamesgrid_columnWidth"

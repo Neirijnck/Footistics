@@ -197,7 +197,7 @@
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/addGameCategoryPosition"
+            android:id="@+id/addGameCategory"
             android:entries="@array/categories"
             android:prompt="@string/add_game_category"
             android:layout_marginRight="@dimen/very_large_padding"
@@ -221,8 +221,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/addGameYellowCard"
             android:layout_alignBottom="@+id/addGameYellowCardIcon"
-            android:layout_alignLeft="@+id/addGameCategoryPosition"
-            android:layout_alignStart="@+id/addGameCategoryPosition"
+            android:layout_alignLeft="@+id/addGameCategory"
+            android:layout_alignStart="@+id/addGameCategory"
             android:max="2"
             android:stepSize="1"
             android:layout_toLeftOf="@+id/addGameYellowCardsNr"
@@ -268,7 +268,7 @@
             android:layout_alignLeft="@+id/addGameRedCardIcon"
             android:layout_alignStart="@+id/addGameRedCardIcon"
             android:layout_marginTop="@dimen/large_padding"
-            android:text="@string/action_save" />
+            android:text="@string/action_save"/>
 
     </RelativeLayout>
 </ScrollView>

@@ -1,4 +1,4 @@
 # Footistics
-Manage your personal statistics as a football player.
+Android application to manage your personal statistics as a football player.
 
 More to come...

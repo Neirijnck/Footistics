@@ -202,7 +202,7 @@
                 android:layout_alignTop="@+id/profileInfoBirthdayText"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginRight="@dimen/very_large_padding"/>
+                android:layout_marginRight="@dimen/large_padding"/>
 
             <ImageView
                 android:id="@+id/profileInfoWeightIcon"

@@ -64,6 +64,7 @@ public class GamesFragment extends Fragment implements LoaderManager.LoaderCallb
         mGrid = (GridView) getView().findViewById(R.id.listGames);
 
         // Setting the adapter
+        mAdapter = new GamesAdapter(getActivity(), null, 0);
         mGrid.setAdapter(mAdapter);
 
         // Setup floating action button for adding games
@@ -101,6 +102,20 @@ public class GamesFragment extends Fragment implements LoaderManager.LoaderCallb
         Utils.trackAction(getActivity(), TAG, label);
     }
 
+    private void updateEmptyView() {
+        View oldEmptyView = mGrid.getEmptyView();
+
+        View emptyView = getView().findViewById(R.id.emptyViewGames);
+
+        if (oldEmptyView != null) {
+            oldEmptyView.setVisibility(View.GONE);
+        }
+
+        if (emptyView != null) {
+            mGrid.setEmptyView(emptyView);
+        }
+    }
+
     @Override
     public Loader<Cursor> onCreateLoader(int loaderId, Bundle args) {
         switch (loaderId) {
@@ -115,6 +130,9 @@ public class GamesFragment extends Fragment implements LoaderManager.LoaderCallb
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
         mAdapter.swapCursor(data);
+
+        // prepare an updated empty view
+        updateEmptyView();
     }
 
     @Override

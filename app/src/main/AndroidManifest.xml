@@ -16,17 +16,29 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Footistics" >
 
+        <!-- Google Play services version tag -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Crashlytics -->
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="fb30971212e13e09f1276bc0204d06f78a7a364b" />
+
+        <!-- Content Provider -->
+        <provider
+            android:name="prebenneirijnck.be.footistics.provider.FootisticsProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="true">
+        </provider>
+
         <!-- Login -->
         <activity
             android:name=".ui.LoginActivity"
             android:label="@string/login"
             android:noHistory="true"
             android:excludeFromRecents="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- Profile -->
@@ -40,11 +52,11 @@
 
         <!-- Seasonal Statistics -->
         <activity android:name=".ui.SeasonalStatsActivity" >
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
@@ -79,16 +91,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.SeasonalStatsActivity" />
         </activity>
-
-        <!-- Google Play services version tag -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
-        <!-- Crashlytics -->
-        <meta-data
-            android:name="com.crashlytics.ApiKey"
-            android:value="fb30971212e13e09f1276bc0204d06f78a7a364b" />
 
     </application>
 

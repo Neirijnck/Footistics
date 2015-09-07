@@ -87,4 +87,7 @@
     <string name="profile_length">Length</string>
     <string name="profile_last_game">Last game was \u0020</string>
 
+    <!--Validation-->
+    <string name="should_not_be_empty">Fill out every field</string>
+
 </resources>
