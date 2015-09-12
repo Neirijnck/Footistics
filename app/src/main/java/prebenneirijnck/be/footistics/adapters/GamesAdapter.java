@@ -37,7 +37,8 @@ public class GamesAdapter extends CursorAdapter{
         viewHolder.category = (TextView) v.findViewById(R.id.game_category);
         viewHolder.score = (TextView) v.findViewById(R.id.game_score);
         viewHolder.goals = (TextView) v.findViewById(R.id.game_nr_goals);
-        viewHolder.position = (TextView) v.findViewById(R.id.game_position);
+        viewHolder.bonus = (TextView) v.findViewById(R.id.game_bonus);
+        viewHolder.playtime = (TextView) v.findViewById(R.id.game_playtime);
         viewHolder.yellowCards = (TextView) v.findViewById(R.id.game_nr_yellow);
         viewHolder.redCards = (TextView) v.findViewById(R.id.game_nr_red);
         viewHolder.clubCrest = (ImageView) v.findViewById(R.id.game_clubicon);
@@ -57,7 +58,8 @@ public class GamesAdapter extends CursorAdapter{
         viewHolder.category.setText(cursor.getString(GamesQuery.CATEGORY));
         viewHolder.score.setText(cursor.getString(GamesQuery.RESULT));
         viewHolder.goals.setText(cursor.getString(GamesQuery.GOALS));
-        viewHolder.position.setText(cursor.getString(GamesQuery.POSITION));
+        viewHolder.bonus.setText(cursor.getString(GamesQuery.BONUS));
+        viewHolder.playtime.setText(cursor.getString(GamesQuery.PLAYTIME));
         viewHolder.yellowCards.setText(cursor.getString(GamesQuery.YELLOWCARDS));
         viewHolder.redCards.setText(cursor.getString(GamesQuery.REDCARD));
     }
@@ -70,7 +72,8 @@ public class GamesAdapter extends CursorAdapter{
                 FootisticsContract.Games.CATEGORY,
                 FootisticsContract.Games.RESULT,
                 FootisticsContract.Games.GOALS,
-                FootisticsContract.Games.POSITION,
+                FootisticsContract.Games.BONUS,
+                FootisticsContract.Games.PLAYTIME,
                 FootisticsContract.Games.YELLOWCARDS,
                 FootisticsContract.Games.REDCARD
         };
@@ -81,9 +84,10 @@ public class GamesAdapter extends CursorAdapter{
         int CATEGORY = 3;
         int RESULT = 4;
         int GOALS = 5;
-        int POSITION = 6;
-        int YELLOWCARDS = 7;
-        int REDCARD = 8;
+        int BONUS = 6;
+        int PLAYTIME = 7;
+        int YELLOWCARDS = 8;
+        int REDCARD = 9;
     }
 
     public static class ViewHolder{
@@ -98,7 +102,9 @@ public class GamesAdapter extends CursorAdapter{
 
         public TextView goals;
 
-        public TextView position;
+        public TextView bonus;
+
+        public TextView playtime;
 
         public TextView yellowCards;
 

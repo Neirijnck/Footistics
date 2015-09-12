@@ -8,6 +8,8 @@ import com.google.android.gms.analytics.Logger;
 
 import io.fabric.sdk.android.Fabric;
 import prebenneirijnck.be.footistics.settings.AppSettings;
+import prebenneirijnck.be.footistics.settings.DisplaySettings;
+import prebenneirijnck.be.footistics.util.Utils;
 import timber.log.Timber;
 
 /**
@@ -39,15 +41,17 @@ public class FootisticsApplication extends Application {
             }
         }
 
+        // Load the current theme into a global variable
+        Utils.updateTheme(DisplaySettings.getThemeIndex(this));
+
         // Ensure GA opt-out
         GoogleAnalytics.getInstance(this).setAppOptOut(AppSettings.isGaAppOptOut(this));
         if (BuildConfig.DEBUG) {
-            //GoogleAnalytics.getInstance(this).setDryRun(true);
+            GoogleAnalytics.getInstance(this).setDryRun(true);
             GoogleAnalytics.getInstance(this).getLogger().setLogLevel(Logger.LogLevel.VERBOSE);
         }
+
         // Initialize tracker
         Analytics.getTracker(this);
-
     }
-
 }

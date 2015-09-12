@@ -170,23 +170,15 @@ public class AddFragment extends Fragment implements Validator.ValidationListene
 
         // Insert the record into database
         getActivity().getContentResolver().insert(FootisticsContract.Games.CONTENT_URI, values);
+
+        // Close current activity
+        getActivity().finish();
     }
 
     @Override
     public void onValidationSucceeded() {
         // Save new game in db
-        saveGame(
-                addEditTextOpponent.getText().toString(),
-                addEditTextDate.getText().toString(),
-                addEditTextScore.getText().toString(),
-                addSpinnerCategory.getSelectedItem().toString(),
-                addSpinnerPosition.getSelectedItem().toString(),
-                addEditTextPlaytime.getText().toString(),
-                addEditTextAssists.getText().toString(),
-                addEditTextGoals.getText().toString(),
-                addSeekBarYellowCards.getProgress(),
-                addCheckBoxRedCard.isChecked(),
-                addEditTextBonus.getText().toString());
+        saveGame(addEditTextOpponent.getText().toString(), addEditTextDate.getText().toString(), addEditTextScore.getText().toString(), addSpinnerCategory.getSelectedItem().toString(), addSpinnerPosition.getSelectedItem().toString(), addEditTextPlaytime.getText().toString(), addEditTextAssists.getText().toString(), addEditTextGoals.getText().toString(), addSeekBarYellowCards.getProgress(), addCheckBoxRedCard.isChecked(), addEditTextBonus.getText().toString());
     }
 
     @Override

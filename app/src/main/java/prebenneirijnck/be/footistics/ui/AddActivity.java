@@ -20,7 +20,7 @@ public class AddActivity extends BaseNavDrawerActivity{
 
         if (savedInstanceState == null) {
             AddFragment f = AddFragment.newInstance();
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, f).commit();
+            getSupportFragmentManager().beginTransaction().add(R.id.content_frame, f).addToBackStack(null).commit();
         }
     }
 

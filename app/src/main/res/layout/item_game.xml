@@ -93,33 +93,56 @@
             tools:text="@string/goals" />
 
         <ImageView
-            android:id="@+id/game_position_icon"
+            android:id="@+id/game_bonus_icon"
             android:layout_width="@dimen/list_icon_size"
             android:layout_height="@dimen/list_icon_size"
-            android:layout_marginLeft="@dimen/large_padding"
-            android:layout_marginStart="@dimen/large_padding"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_marginStart="@dimen/default_padding"
             android:layout_alignTop="@+id/game_goals_icon"
             android:layout_toRightOf="@+id/game_nr_goals"
             android:layout_toEndOf="@+id/game_nr_goals"
-            android:src="?attr/drawableAddGamePositionIcon" />
+            android:src="?attr/drawableAddGameBonusIcon" />
 
         <TextView
-            android:id="@+id/game_position"
+            android:id="@+id/game_bonus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/inline_padding"
             android:layout_marginStart="@dimen/inline_padding"
             android:layout_alignTop="@+id/game_nr_goals"
-            android:layout_toRightOf="@+id/game_position_icon"
-            android:layout_toEndOf="@+id/game_position_icon"
+            android:layout_toRightOf="@+id/game_bonus_icon"
+            android:layout_toEndOf="@+id/game_bonus_icon"
             android:textAppearance="@style/TextAppearance.Caption"
-            tools:text="@string/add_game_position" />
+            tools:text="@string/add_game_bonus" />
+
+        <ImageView
+            android:id="@+id/game_playtime_icon"
+            android:layout_width="@dimen/list_icon_size"
+            android:layout_height="@dimen/list_icon_size"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_marginStart="@dimen/default_padding"
+            android:layout_alignTop="@+id/game_goals_icon"
+            android:layout_toRightOf="@+id/game_bonus"
+            android:layout_toEndOf="@+id/game_bonus"
+            android:src="?attr/drawableAddGamePlaytimeIcon" />
+
+        <TextView
+            android:id="@+id/game_playtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inline_padding"
+            android:layout_marginStart="@dimen/inline_padding"
+            android:layout_alignTop="@+id/game_nr_goals"
+            android:layout_toRightOf="@+id/game_playtime_icon"
+            android:layout_toEndOf="@+id/game_playtime_icon"
+            android:textAppearance="@style/TextAppearance.Caption"
+            tools:text="@string/add_game_playtime" />
 
         <ImageView
             android:id="@+id/game_yellow_card_icon"
             android:layout_width="@dimen/list_icon_size"
             android:layout_height="@dimen/list_icon_size"
-            android:layout_alignTop="@+id/game_position_icon"
+            android:layout_alignTop="@+id/game_bonus_icon"
             android:layout_toLeftOf="@+id/game_nr_yellow"
             android:layout_toStartOf="@+id/game_nr_yellow"
             android:src="@drawable/yellow_card"/>
@@ -130,7 +153,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/default_padding"
             android:layout_marginEnd="@dimen/default_padding"
-            android:layout_alignTop="@+id/game_position"
+            android:layout_alignTop="@+id/game_bonus"
             android:layout_toLeftOf="@+id/game_red_card_icon"
             android:layout_toStartOf="@+id/game_red_card_icon"
             android:textAppearance="@style/TextAppearance.Caption"

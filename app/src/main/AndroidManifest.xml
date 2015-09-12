@@ -59,9 +59,20 @@
             </intent-filter>
         </activity>
 
+        <!-- Add -->
         <activity
             android:name=".ui.AddActivity"
             android:label="@string/action_add_game"
+            android:launchMode="singleTop" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.SeasonalStatsActivity" />
+        </activity>
+
+        <!-- Edit -->
+        <activity
+            android:name=".ui.EditActivity"
+            android:label="@string/action_edit"
             android:launchMode="singleTop" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

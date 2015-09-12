@@ -1,7 +1,11 @@
 package prebenneirijnck.be.footistics.ui;
 
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -12,6 +16,9 @@ import android.view.ViewGroup;
 import prebenneirijnck.be.footistics.R;
 
 public class ProfileFragment extends Fragment{
+
+    private ActionBar toolbar;
+    private Drawable mActionBarBackgroundDrawable;
 
     public static ProfileFragment newInstance() {
         ProfileFragment f = new ProfileFragment();
@@ -32,6 +39,11 @@ public class ProfileFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v =  inflater.inflate(R.layout.fragment_profile, container, false);
 
+        toolbar = ((ActionBarActivity)getActivity()).getSupportActionBar();
+        mActionBarBackgroundDrawable = getResources().getDrawable(R.color.ft_primary);
+        mActionBarBackgroundDrawable.setAlpha(255);
+        toolbar.setBackgroundDrawable(mActionBarBackgroundDrawable);
+
         return v;
     }
 
@@ -50,8 +62,11 @@ public class ProfileFragment extends Fragment{
                 getActivity().onBackPressed();
                 return true;
             case R.id.menu_action_edit:
-                EditProfileFragment f = EditProfileFragment.newInstance();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, f).commit();
+                Intent intent = new Intent(getActivity(), EditActivity.class);
+                Bundle b = new Bundle();
+                b.putString("type", this.getClass().getSimpleName());
+                intent.putExtras(b);
+                startActivity(intent);
                 return true;
         }
         return super.onOptionsItemSelected(item);
